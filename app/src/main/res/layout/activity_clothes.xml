@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="56dp"
+        android:padding="16dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Title Section -->
+            <TextView
+                android:id="@+id/orderTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clothes"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="8dp" />
+
+            <!-- Search Bar Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_corner_light"
+                android:padding="5dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_search"
+                    android:contentDescription="@string/image_ic_desc7" />
+
+                <EditText
+                    android:id="@+id/searchEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:hint="@string/search"
+                    android:padding="8dp"
+                    android:textColorHint="@color/white"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:autofillHints="username"
+                    android:importantForAutofill="yes"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text" />
+
+                <ImageButton
+                    android:id="@+id/filterButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/icon_filter"
+                    android:layout_marginEnd="10dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/image_ic_desc11" />
+            </LinearLayout>
+
+            <!-- Categories -->
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Individual Categories -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/categoryIcon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/img_category1"
+                            android:contentDescription="@string/img_desc_cat1" />
+
+                        <TextView
+                            android:id="@+id/categoryTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/category1"
+                            android:textSize="12sp"
+                            android:textColor="@color/dark"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+
+                    <!-- Individual Categories -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="8dp" >
+
+                        <ImageView
+                            android:id="@+id/categoryIcon2"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/img_category2"
+                            android:contentDescription="@string/img_desc_cat1" />
+
+                        <TextView
+                            android:id="@+id/categoryTitle2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/category2"
+                            android:textSize="12sp"
+                            android:textColor="@color/dark"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+
+                    <!-- Individual Categories -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="8dp" >
+
+                        <ImageView
+                            android:id="@+id/categoryIcon3"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/img_category3"
+                            android:contentDescription="@string/img_desc_cat1" />
+
+                        <TextView
+                            android:id="@+id/categoryTitle3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/category3"
+                            android:textSize="12sp"
+                            android:textColor="@color/dark"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+
+                    <!-- Individual Categories -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="8dp" >
+
+                        <ImageView
+                            android:id="@+id/categoryIcon4"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/img_category4"
+                            android:contentDescription="@string/img_desc_cat1" />
+
+                        <TextView
+                            android:id="@+id/categoryTitle4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/category4"
+                            android:textSize="12sp"
+                            android:textColor="@color/dark"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+
+                    <!-- Individual Categories -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="8dp" >
+
+                        <ImageView
+                            android:id="@+id/categoryIcon5"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/img_category5"
+                            android:contentDescription="@string/img_desc_cat1" />
+
+                        <TextView
+                            android:id="@+id/categoryTitle5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/category5"
+                            android:textSize="12sp"
+                            android:textColor="@color/dark"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+
+                    <!-- Individual Categories -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="8dp" >
+
+                        <ImageView
+                            android:id="@+id/categoryIcon6"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/img_category7"
+                            android:contentDescription="@string/img_desc_cat1" />
+
+                        <TextView
+                            android:id="@+id/categoryTitle6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/category6"
+                            android:textSize="12sp"
+                            android:textColor="@color/dark"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+
+                    <!-- Individual Categories -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="8dp" >
+
+                        <ImageView
+                            android:id="@+id/categoryIcon7"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/img_category8"
+                            android:contentDescription="@string/img_desc_cat1" />
+
+                        <TextView
+                            android:id="@+id/categoryTitle7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/category7"
+                            android:textSize="12sp"
+                            android:textColor="@color/dark"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+
+                    <!-- Individual Categories -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="8dp" >
+
+                        <ImageView
+                            android:id="@+id/categoryIcon8"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/img_category9"
+                            android:contentDescription="@string/img_desc_cat1" />
+
+                        <TextView
+                            android:id="@+id/categoryTitle8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/category8"
+                            android:textSize="12sp"
+                            android:textColor="@color/dark"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Section Title -->
+            <TextView
+                android:id="@+id/sectionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/category1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:paddingTop="12dp"
+                android:paddingBottom="8dp" />
+
+            <!-- Clothes Grid -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:columnOrderPreserved="false"
+                android:padding="4dp"
+                android:layout_marginBottom="8dp">
+
+                <!-- Individual Clothes Card -->
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp" >
+
+                    <ImageView
+                        android:id="@+id/clothesImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_clothes_item1"
+                        android:contentDescription="@string/clothes_item" />
+
+                    <ImageView
+                        android:id="@+id/heartIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="top|end"
+                        android:src="@drawable/icon_heart"
+                        android:contentDescription="@string/image_ic_desc13"
+                        android:layout_margin="8dp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/clothesImage2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_clothes_item2"
+                        android:contentDescription="@string/clothes_item" />
+
+                    <ImageView
+                        android:id="@+id/heartIcon2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="top|end"
+                        android:src="@drawable/icon_heart"
+                        android:contentDescription="@string/image_ic_desc13"
+                        android:layout_margin="8dp" />
+                </FrameLayout>
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:columnOrderPreserved="false"
+                android:padding="4dp"
+                android:layout_marginBottom="8dp">
+
+                <!-- Individual Clothes Card -->
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp" >
+
+                    <ImageView
+                        android:id="@+id/clothesImage3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_clothes_item3"
+                        android:contentDescription="@string/clothes_item" />
+
+                    <ImageView
+                        android:id="@+id/heartIcon3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="top|end"
+                        android:src="@drawable/icon_heart"
+                        android:contentDescription="@string/image_ic_desc13"
+                        android:layout_margin="8dp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/clothesImage4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_clothes_item4"
+                        android:contentDescription="@string/clothes_item" />
+
+                    <ImageView
+                        android:id="@+id/heartIcon4"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="top|end"
+                        android:src="@drawable/icon_heart"
+                        android:contentDescription="@string/image_ic_desc13"
+                        android:layout_margin="8dp" />
+                </FrameLayout>
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:columnOrderPreserved="false"
+                android:padding="4dp"
+                android:layout_marginBottom="8dp">
+
+                <!-- Individual Clothes Card -->
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp" >
+
+                    <ImageView
+                        android:id="@+id/clothesImage5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_clothes_item5"
+                        android:contentDescription="@string/clothes_item" />
+
+                    <ImageView
+                        android:id="@+id/heartIcon5"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="top|end"
+                        android:src="@drawable/icon_heart"
+                        android:contentDescription="@string/image_ic_desc13"
+                        android:layout_margin="8dp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/clothesImage6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_clothes_item6"
+                        android:contentDescription="@string/clothes_item" />
+
+                    <ImageView
+                        android:id="@+id/heartIcon6"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="top|end"
+                        android:src="@drawable/icon_heart"
+                        android:contentDescription="@string/image_ic_desc13"
+                        android:layout_margin="8dp" />
+                </FrameLayout>
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:columnOrderPreserved="false"
+                android:padding="4dp"
+                android:layout_marginBottom="50dp">
+
+                <!-- Individual Clothes Card -->
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp" >
+
+                    <ImageView
+                        android:id="@+id/clothesImage7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_clothes_item7"
+                        android:contentDescription="@string/clothes_item" />
+
+                    <ImageView
+                        android:id="@+id/heartIcon7"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="top|end"
+                        android:src="@drawable/icon_heart"
+                        android:contentDescription="@string/image_ic_desc13"
+                        android:layout_margin="8dp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/clothesImage8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_clothes_item8"
+                        android:contentDescription="@string/clothes_item" />
+
+                    <ImageView
+                        android:id="@+id/heartIcon8"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="top|end"
+                        android:src="@drawable/icon_heart"
+                        android:contentDescription="@string/image_ic_desc13"
+                        android:layout_margin="8dp" />
+                </FrameLayout>
+            </GridLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_add"
+        app:backgroundTint="@color/primary"
+        android:layout_margin="25dp"
+        app:layout_anchor="@id/bottomNavigationView"
+        app:layout_anchorGravity="top|center_horizontal"
+        app:elevation="10dp"
+        android:contentDescription="@string/image_ic_desc10" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@color/primary"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

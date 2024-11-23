@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="56dp"
+        android:padding="16dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Title Section -->
+            <TextView
+                android:id="@+id/orderTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="8dp" />
+
+            <!-- Search Bar Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_corner_light"
+                android:padding="5dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_search"
+                    android:contentDescription="@string/image_ic_desc7" />
+
+                <EditText
+                    android:id="@+id/searchEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:hint="@string/search"
+                    android:padding="8dp"
+                    android:textColorHint="@color/white"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:autofillHints="username"
+                    android:importantForAutofill="yes"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text" />
+
+                <ImageButton
+                    android:id="@+id/filterButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/icon_filter"
+                    android:layout_marginEnd="10dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/image_ic_desc11" />
+            </LinearLayout>
+
+            <!-- Latest Orders Section -->
+            <TextView
+                android:id="@+id/latestOrdersTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/latest_orders"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingBottom="17dp"
+                android:textColor="@color/primary" />
+
+            <!-- Order Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_corner_order"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/order_background"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/orderIcon"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/icon_receipt"
+                        android:contentDescription="@string/image_ic_desc12"
+                        android:layout_marginEnd="12dp"
+                        android:layout_gravity="top" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/ordersTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_num"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/orderTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/order_status"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/orderDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_item1"
+                            android:textSize="16sp"
+                            android:layout_marginTop="6dp"
+                            android:textColor="@color/dark" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/orderStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/progress1"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/secondary"
+                        android:layout_gravity="top" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_corner_order"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/order_background"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/orderIcon2"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/icon_receipt"
+                        android:contentDescription="@string/image_ic_desc12"
+                        android:layout_marginEnd="12dp"
+                        android:layout_gravity="top" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/ordersTitle2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_num"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/orderTime2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/order_status"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/orderDescription2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_item2"
+                            android:textSize="16sp"
+                            android:layout_marginTop="6dp"
+                            android:textColor="@color/dark" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/orderStatus2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/progress2"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/secondary"
+                        android:layout_gravity="top" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_corner_order"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/order_background"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/orderIcon3"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/icon_receipt"
+                        android:contentDescription="@string/image_ic_desc12"
+                        android:layout_marginEnd="12dp"
+                        android:layout_gravity="top" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/ordersTitle3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_num"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/orderTime3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/order_status"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/orderDescription3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_item3"
+                            android:textSize="16sp"
+                            android:layout_marginTop="6dp"
+                            android:textColor="@color/dark" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/orderStatus3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/progress3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/secondary"
+                        android:layout_gravity="top" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Latest Orders Section -->
+            <TextView
+                android:id="@+id/historyOrdersTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/history_orders"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingBottom="17dp"
+                android:textColor="@color/primary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_corner_order"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/order_background"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/orderIcon4"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/icon_receipt"
+                        android:contentDescription="@string/image_ic_desc12"
+                        android:layout_marginEnd="12dp"
+                        android:layout_gravity="top" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/ordersTitle4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_num"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/orderTime4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/order_status"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/orderDescription4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_item4"
+                            android:textSize="16sp"
+                            android:layout_marginTop="6dp"
+                            android:textColor="@color/dark" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/orderStatus4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/progress3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/secondary"
+                        android:layout_gravity="top" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_corner_order"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/order_background"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/orderIcon5"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/icon_receipt"
+                        android:contentDescription="@string/image_ic_desc12"
+                        android:layout_marginEnd="12dp"
+                        android:layout_gravity="top" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/ordersTitle5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_num"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/orderTime5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/order_status"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/orderDescription5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_item5"
+                            android:textSize="16sp"
+                            android:layout_marginTop="6dp"
+                            android:textColor="@color/dark" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/orderStatus5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/progress3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/secondary"
+                        android:layout_gravity="top" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_corner_order"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/order_background"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/orderIcon6"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/icon_receipt"
+                        android:contentDescription="@string/image_ic_desc12"
+                        android:layout_marginEnd="12dp"
+                        android:layout_gravity="top" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/ordersTitle6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_num"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/orderTime6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/order_status"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/orderDescription6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_item1"
+                            android:textSize="16sp"
+                            android:layout_marginTop="6dp"
+                            android:textColor="@color/dark" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/orderStatus6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/progress3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/secondary"
+                        android:layout_gravity="top" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_corner_order"
+                android:padding="12dp"
+                android:layout_marginBottom="50dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/order_background"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/orderIcon7"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/icon_receipt"
+                        android:contentDescription="@string/image_ic_desc12"
+                        android:layout_marginEnd="12dp"
+                        android:layout_gravity="top" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/ordersTitle7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_num"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/orderTime7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/order_status"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/orderDescription7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_item2"
+                            android:textSize="16sp"
+                            android:layout_marginTop="6dp"
+                            android:textColor="@color/dark" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/orderStatus7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/progress3"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/secondary"
+                        android:layout_gravity="top" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_add"
+        app:backgroundTint="@color/primary"
+        android:layout_margin="25dp"
+        app:layout_anchor="@id/bottomNavigationView"
+        app:layout_anchorGravity="top|center_horizontal"
+        app:elevation="10dp"
+        android:contentDescription="@string/image_ic_desc10" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@color/primary"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
